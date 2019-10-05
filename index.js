@@ -1,4 +1,4 @@
-function workingSite() {
+#function workingSite() {
 var band = [
     'https://open.spotify.com/album/2kPGKJvJg0CI2TPDdYjNAB',
     'https://open.spotify.com/album/0DJFrh8Wchu7IpScELuwl6',
@@ -109,7 +109,7 @@ var band = [
     'https://open.spotify.com/album/1m9pVpzjKj4FLXW7GIqIJh',
     'https://open.spotify.com/album/2q9SIgBwOU7TUKWwwEYKNW'
 ];
-
+#
 
 
 var generateBand = band[Math.floor(Math.random()*band.length)];
