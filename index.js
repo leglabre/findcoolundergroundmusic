@@ -1,211 +1,96 @@
 function workingSite() {
-var band = [
-    'https://open.spotify.com/album/2kPGKJvJg0CI2TPDdYjNAB',
-    'https://open.spotify.com/album/0DJFrh8Wchu7IpScELuwl6',
-    'https://open.spotify.com/album/2cOHTdh4UVY4f80TelZq1u',
-    'https://open.spotify.com/album/1g37MKEl3KjcZpvoqXKY8Q',
-    'https://open.spotify.com/album/0M7tQoeNswwZhAKa8uibV9',
-    'https://open.spotify.com/album/2trzgjuZEtD2tlIL1EjONv',
-    'https://open.spotify.com/album/7D4f6nyoKlrg6VKZ7t6vBh',
-    'https://open.spotify.com/album/21l8vD1kXPG1Uj03dA1KFH',
-    'https://open.spotify.com/album/1RaKlRMQcQWUgdhAwSFFJQ',
-    'https://open.spotify.com/album/2av6VdXZ0qJWgdTsZAdqj9',
-    'https://open.spotify.com/album/0JSC85wZIL0u7uwbO2rv5J',
-    'https://open.spotify.com/album/7HJZpfOka4PBLalqcOLlpo',
-    'https://open.spotify.com/album/3Rje64ND59VtJQ7Sl8kwq3',
-    'https://open.spotify.com/album/7JK4S80gnlL0DLKp921ujD',
-    'https://open.spotify.com/album/3HTCoWNSO2UGZ23oKRRGGM',
-    'https://open.spotify.com/album/0U5jIPyGGreighvPHOwmTR',
-    'https://open.spotify.com/album/5gHeA1IYYEDZoGMPoNgmjP',
-    'https://open.spotify.com/album/6Z367XrT4LaM3FM4YsfjVx',
-    'https://open.spotify.com/album/2q37f0ENUtmnmirBelFjAC',
-    'https://open.spotify.com/album/5qyj79rRuklEu1jUW4QqQp',
-    'https://open.spotify.com/album/4Er8RIEydm06IqIgRpjcMQ',
-    'https://open.spotify.com/album/3p3GF7VSuEKUc6NQWhxkIx',
-    'https://open.spotify.com/album/7hr3r7aKVeEIdLct1wXOnW',
-    'https://open.spotify.com/album/0mKfDHGWsLKZcHKLmlZ4Oe',
-    'https://open.spotify.com/album/5FdDMp7425H7byWJfb2zVP',
-    'https://open.spotify.com/album/3cUo4OJPMLOWesOn7DshRW',
-    'https://open.spotify.com/album/4OYllqJB6dZzQ1n03lhwg9',
-    'https://open.spotify.com/album/4ztRorEnqKLAv2ohF234gf',
-    'https://open.spotify.com/album/30ACaprlZ2SsyZwT55CBlD',
-    'https://open.spotify.com/album/7IhHxTiSqgD7JcdMV8mINF',
-    'https://open.spotify.com/album/6vZszIMZ7Spzca3C7QSgaY',
-    'https://open.spotify.com/album/0SHDcJOJBHp3VGot6A8JMS',
-    'https://open.spotify.com/album/4ygyND85sM13LJdH75qR2v',
-    'https://open.spotify.com/album/2It2ZoywciLk4zgFO65ZPK',
-    'https://open.spotify.com/album/3FXGZSleicxFP8J2zyiZgu',
-    'https://open.spotify.com/album/4tCjb5obtTHPz3jKwZgUrs',
-    'https://open.spotify.com/album/6Ia2sw3y79k40GHeNjCfLh',
-    'https://open.spotify.com/album/6wsNQ0GmEItYhZak4feBS7',
-    'https://open.spotify.com/album/2O6EhNb0dWg4qgA9yt8Aro',
-    'https://open.spotify.com/album/5NWcRL5T0NhuE3N6XggV6M',
-    'https://open.spotify.com/album/0PfW1LEDjtcQaYA94p0Rkb',
-    'https://open.spotify.com/album/14cpPDkOj2c9oaZBddqOw2',
-    'https://open.spotify.com/album/2mXvYRDywmImKtoUcC1TKK',
-    'https://open.spotify.com/album/1bvP284DaUaORsAONQTBMY',
-    'https://open.spotify.com/album/6vaUHBfp2ib448kDw5KGwR',
-    'https://open.spotify.com/album/24FvyKjULF8pot6794gzBI',
-    'https://open.spotify.com/album/4uWjkDLlhMsVb0KAlk4lbD',
-    'https://open.spotify.com/album/0h2rDg9Mdfl1kQTVeznEty',
-    'https://open.spotify.com/album/2FMGqUgaV5vyWRABVeW04V',
-    'https://open.spotify.com/album/5GQ2t0aTsVvziPxR0s7rhf',
-    'https://open.spotify.com/album/4hVIufZ0wDYDo64FzY81lf',
-    'https://open.spotify.com/album/6DZNVDzizEmTEvpKEATkPH',
-    'https://open.spotify.com/album/5JsFhG2RtuW03jN42pE5KG',
-    'https://open.spotify.com/album/5MvrwYrdaOUUy3dkXXDXkc',
-    'https://open.spotify.com/album/4oi6DxgouCsmf9Jk4NGCMR',
-    'https://open.spotify.com/album/2nZwh0vvAdoeEHWEs6Cmaj',
-    'https://open.spotify.com/album/2nZwh0vvAdoeEHWEs6Cmaj',
-    'https://open.spotify.com/album/136I3zr7xnBoy91hfi66FJ',
-    'https://open.spotify.com/album/69dl4uZ2iHY1EYizzxHwXG',
-    'https://open.spotify.com/album/5EUXlXcQMU1WOQm2p27kYe',
-    'https://open.spotify.com/album/5xGZN3mTCTglKzOaa8hBwi',
-    'https://open.spotify.com/album/3Yncz47Y6OKhwkWYvCdLhO',
-    'https://open.spotify.com/album/6vMHo4nTaLGrQNf4Iey6mv',
-    'https://open.spotify.com/album/4tCzrHhdqQ8CiM9e3tZR0F',
-    'https://open.spotify.com/album/2y2ncRDm2d0SoyAChDC6jy',
-    'https://open.spotify.com/album/7bm5Lf93EE2bB5h6t0OjKV',
-    'https://open.spotify.com/album/6A8waHw5O283BzA1B0w8PY',
-    'https://open.spotify.com/album/1pmtdUy552s8Oy3FRF3j8x',
-    'https://open.spotify.com/album/2nOKzaZcSfPn8lvZGJEFz7',
-    'https://open.spotify.com/album/48ifIFOYY23rbmzJn80gN9',
-    'https://open.spotify.com/album/3gnrscBK1GRnFyHwvi0544',
-    'https://open.spotify.com/album/4Tcgre8MDM64YcQeCLY8ju',
-    'https://open.spotify.com/album/4S58uP6IPglSUO3UDbahRM',
-    'https://open.spotify.com/album/4qvZ2pUy4LN9nCZ7BHiHic',
-    'https://open.spotify.com/album/1E2LbIIeKLqKT8cyp5ig8t',
-    'https://open.spotify.com/album/2CQ2dGh6U6Ssbz0t8RyjrE',
-    'https://open.spotify.com/album/1u8ZoNacS2TAjNBDc2eecp',
-    'https://open.spotify.com/album/78OaNCgtn4kLfU9IC2Lw6i',
-    'https://open.spotify.com/album/5ulibSBuKuLfEBMeuOe1De',
-    'https://open.spotify.com/album/55qMSsA766ddrL1jOb00zI',
-    'https://open.spotify.com/album/0VTsYwWfgeGrtsmZXBED57',
-    'https://open.spotify.com/album/0tiivwe6ncMYQHW1QOKRKh',
-    'https://open.spotify.com/album/7bgi7zCoDsZdlLKPonHZqP',
-    'https://open.spotify.com/album/3VRPrDeQHoLl2hY6aBgQCX',
-    'https://open.spotify.com/album/6e8dqRS7OiFAcNHSDI7xb7',
-    'https://open.spotify.com/album/6wQmnMUKfzvInZAOPAIeH2',
-    'https://open.spotify.com/album/6EDLX245U4Uh9iO543xo4v',
-    'https://open.spotify.com/album/1gfe5x4eQmjYWENvu6cmci',
-    'https://open.spotify.com/album/7zZH9XxueOQVrwxNcXyI28',
-    'https://open.spotify.com/album/6eaQnw5UqF0jUANhOjTB1n',
-    'https://open.spotify.com/album/24mTbabIfcPYpqFhzn70HQ',
-    'https://open.spotify.com/album/1kA36zBinlnQzJOOM3Xo1m',
-    'https://open.spotify.com/album/05ZhfwayNPbRLHWAKmftea',
-    'https://open.spotify.com/album/3abwtJjY1YoTBVWYsDjWdz',
-    'https://open.spotify.com/album/5fXU7CPOLut6tRryEtQEEH',
-    'https://open.spotify.com/album/7y4lCnCKcXODt9Qh2bsQU2',
-    'https://open.spotify.com/album/08D0Jby6PtRWX9io6dQamA',
-    'https://open.spotify.com/album/1zTazF7H2MoCLajKlmGQ3V',
-    'https://open.spotify.com/album/5jk4XQ30TG2OOheSlEwY1Z',
-    'https://open.spotify.com/album/1aLP4fCY2KGAkR49YArBDk',
-    'https://open.spotify.com/album/5gxoKngxrfPdm8BPlsnB5m',
-    'https://open.spotify.com/album/4JLJac0pgIRV4Gie86Mrk6',
-    'https://open.spotify.com/album/2Wxjq5v0aWRD6ZkLd091c1',
-    'https://open.spotify.com/album/1oGsfPf2MzsctniqNsDZFy',
-    'https://open.spotify.com/album/0iUC4DRrYWNZfxs93ynYzZ',
-    'https://open.spotify.com/album/4vL8d3qmJskO47ZHb01tCs',
-    'https://open.spotify.com/album/1m9pVpzjKj4FLXW7GIqIJh',
-    'https://open.spotify.com/album/2q9SIgBwOU7TUKWwwEYKNW',
-"https://open.spotify.com/album/7AzLY3OCx0xrzCYMlIopRh",
-"https://open.spotify.com/album/1Fhuozeg9xpG61Oa6LMFxL",
-"https://open.spotify.com/album/1gb8ZDw01lAHZRQVFuHwcM",
-"https://open.spotify.com/album/0jS2XwnBHNNbhekip9kfSM",
-"https://open.spotify.com/album/7behJdMRaGWSyXdzkg1hyi",
-"https://open.spotify.com/album/6N3hrl7KzFVe4lTMohpO03",
-"https://open.spotify.com/album/7xmptzhNwe5qzogmMGosKO",
-"https://open.spotify.com/album/1a1K5r92gK3xGpM7K7xVzk",
-"https://open.spotify.com/album/5ZGHnnXzO1REd4PiN2s2fB",
-"https://open.spotify.com/album/2afxPgGqLlFrolXijoKb4L",
-"https://open.spotify.com/album/01cJcrn4l6n9ScZnqn35ir",
-"https://open.spotify.com/album/3cvqgz09TZKq9KHPCfTVdU",
-"https://open.spotify.com/album/2usDuczD98n3Eqg79QAR4Y",
-"https://open.spotify.com/album/5yXAHOZ96y7fj5j1XiX3K8",
-"https://open.spotify.com/album/7imORAK8Qa40pbKJILg8BT",
-"https://open.spotify.com/album/41PfMaFddHOcxxkvbycHga",
-"https://open.spotify.com/album/7AiWJCZ2HArLkWG8HdPgIQ",
-"https://open.spotify.com/album/2L1b9sSISE7oE3Y2B1UlBx",
-"https://open.spotify.com/album/13aBC6LtPybtYKtMMDdE4W",
-"https://open.spotify.com/album/325N6QCurdWQX8uCDK7EkJ",
-"https://open.spotify.com/album/5YIy67yOuivSYObR3sbj6W",
-"https://open.spotify.com/album/0aBiILh0LZalPkT0ve0RBs",
-"https://open.spotify.com/album/2gWGiNp10JRlsP0wnkJqJf",
-"https://open.spotify.com/album/4Mw4KC7LipiviZTWhXrAhs",
-"https://open.spotify.com/album/6oInPicMsvi5ufwK34YCLE",
-"https://open.spotify.com/album/7brzNHopjosNw2ddDMjtwg",
-"https://open.spotify.com/album/7BSe2EAPUNskkzwCrVfVTp",
-"https://open.spotify.com/album/2BD06kPNevR4EL4yqaUqOP",
-"https://open.spotify.com/album/7LYUo2bfaJ3T5HvOQVaADr",
-"https://open.spotify.com/album/6ZWeoJI6945xP5KLEgsIl5",
-"https://open.spotify.com/album/2u3CQWMZNFURXVVYSMxWbM",
-"https://open.spotify.com/album/5ZLtFPkZbnAPKeGqRrpQYd",
-"https://open.spotify.com/album/14H2rmBLU6VxXpNfdpRh1z",
-"https://open.spotify.com/album/5SAzfGrSwd1QaDGMirBU5e",
-"https://open.spotify.com/album/7oHAH6BfMwDcSLI1YyxU81",
-"https://open.spotify.com/album/3ioBNl4CKZfJVbyA2ZHHpU",
-"https://open.spotify.com/album/2i3825q36PqJHlqHdZFZBE",
-"https://open.spotify.com/album/1BLsgB0FPErCgus7t3nTi3",
-"https://open.spotify.com/album/7INulFwDmgAPwExbaeAWoH",
-"https://open.spotify.com/album/7eVY0677xRMK8I4syfRA6M",
-"https://open.spotify.com/album/3cSB5MsWScPMNvKPoDeaL0",
-"https://open.spotify.com/album/5883TvzGSwcBuhAafpDVr0",
-"https://open.spotify.com/album/56lgaaW0izVKXThsk9cqLE",
-"https://open.spotify.com/album/2QdexRzNUXkbHyHoVfrtaj",
-"https://open.spotify.com/album/3LuBwIxzgfo9579smrH6Uf",
-"https://open.spotify.com/album/2QKwnysUYSxmob2CLQTMMh",
-"https://open.spotify.com/album/0VM6c3NXOlaa9LKl4dOnFV",
-"https://open.spotify.com/album/76ocBsKdXaFbL1edOyA6aC",
-"https://open.spotify.com/album/51Feoswkepa9SEg307gah5",
-"https://open.spotify.com/album/3qMeTFrogtWfk4gGOfVNX7",
-"https://open.spotify.com/album/0Uh7J2iz5f2zRwAo2MaNhJ",
-"https://open.spotify.com/album/6WDdeivbRK1JTsVKaY5mD4",
-"https://open.spotify.com/album/5TNwDJK182ibDNObp5DclP",
-"https://open.spotify.com/album/102yfMNPzomYhs88RBvPGu",
-"https://open.spotify.com/album/5121LhU4bcS1DsL7Y33Iqf",
-"https://open.spotify.com/album/3awjfAkmTKgNcFdGk8So8M",
-"https://open.spotify.com/album/6hGIYmbgyD2Hd0K9wMbV82",
-"https://open.spotify.com/album/2MCKoonObhYFkWb5azuVNM",
-"https://open.spotify.com/album/3yYGTngHasHWWeyZ4SFQzx",
-"https://open.spotify.com/album/5dcLbUaWSJPcYykHbhEIBs",
-"https://open.spotify.com/album/4typKG5HG3aKrZTcTUs5gR",
-"https://open.spotify.com/album/5jY6HJRJZeVvziOcG3QGZB",
-"https://open.spotify.com/album/1tQu54ijI8xXIQxOLYPQzL",
-"https://open.spotify.com/album/4q9E5jAAcVTutsH2Ctpwhb",
-"https://open.spotify.com/album/3tTqblrxKo5ZvuhWSg8zRy",
-"https://open.spotify.com/album/7wEBUUbQvLH2zkT23SE06V",
-"https://open.spotify.com/album/7hzNKDHipGQFPBHVboIFb6",
-"https://open.spotify.com/album/2TxnZ116PhDVXyGnW3OwxB",
-"https://open.spotify.com/album/3lXeEthVaUmwtyKj0myPnZ",
-"https://open.spotify.com/album/3vz1t2QAMI7HO3l049XyMt",
-"https://open.spotify.com/album/7o6ODFrS8G6YgwY7bsAR1W",
-"https://open.spotify.com/album/3fcDrMOfECm2nZwwp9Nbge",
-"https://open.spotify.com/album/3kdaoYi2SztpyarxBZ3py6",
-"https://open.spotify.com/album/1p2J99ueyaBixV8hp266uz",
-"https://open.spotify.com/album/3uF0eDO6FcdBSJcR4wdwms",
-"https://open.spotify.com/album/2uSeSoosBWMI0bYbvBwJAm",
-"https://open.spotify.com/album/6Ueh56mt7zYq80ryGgWNJR",
-"https://open.spotify.com/album/5CNcTVrgGUXPTewHvOFzlv",
-"https://open.spotify.com/album/1xZmDyFDswCegCLRZYvqRf",
-"https://open.spotify.com/album/4FE3aH9bVAAFMBVSNPxKIT",
-"https://open.spotify.com/album/5sawDVKUv5o4j1KU8JUyEP",
-"https://open.spotify.com/album/5kCJfEVm8sBIcokWRAEQ3F",
-"https://open.spotify.com/album/4lOnrRZSE2reAglgOmzLel",
-"https://open.spotify.com/album/0OXi26j1IAohfBcODo60dN",
-"https://open.spotify.com/album/0i1XEyBtfS6LdSW572R8H8",
-"https://open.spotify.com/album/5JtW9TU74xyVtRQXjjLpL1",
-"https://open.spotify.com/album/0h7WAAvFPveqgL5Ftjfqig",
-"https://open.spotify.com/album/2dKZvc9JhER975n3kxPYZu",
-"https://open.spotify.com/album/1KMVxVoX3inBf9aCVcFS1P",
-"https://open.spotify.com/album/3LMsFkOLJImsFFUddEjLDy",
-"https://open.spotify.com/album/2UaTxbzX0NWE81YpK7Xgeb",
-"https://open.spotify.com/album/5wqBi2juBdWCijxa1a5QFk",
-"https://open.spotify.com/album/60v8QWUtub3PvY9G44swIy",
-"https://open.spotify.com/album/3nJeN4aNv9MBY5XTzK64Qi",
-"https://open.spotify.com/album/2aZvcRVFrg5J55lU7lvhs3",
-"https://open.spotify.com/album/3DlS3knemmDez2gMIQ8ZqQ",
-"https://open.spotify.com/album/4S5MLu2PKU7uElm2V3JphK",
-"https://open.spotify.com/album/41aGoncUw8CbPqUTIJOVeM"
+var band = [https://open.spotify.com/album/7uDX4DjHqn19vrtTYCGcUM
+https://open.spotify.com/album/0J2TlWaut2IAlWdBRHLIHf
+https://open.spotify.com/album/1WXUFnkSXHvBSPyqeuZ7Qd
+https://open.spotify.com/album/5AI0KCzgLqhLxjRSF3ZhJW
+https://open.spotify.com/album/2spORRGVutsk0KwxPhd3eU
+https://open.spotify.com/album/4z0wIv63H2EM3hqF3Sgg4K
+https://open.spotify.com/album/7MRPmSZlmMZK4XYiwEPkZi
+https://open.spotify.com/album/5GVnymCuKJfPTnxZmiBkf2
+https://open.spotify.com/album/7vyBnkWzfNMudMrdJfRNsm
+https://open.spotify.com/album/1DmluQNCedlQCDlnewyUQA
+https://open.spotify.com/album/1zLEaaVnJyHJdCz6E1mWYW
+https://open.spotify.com/album/2uX4aKcd4O096HsBwlrk2x
+https://open.spotify.com/album/01N4unxNczwSNsrHDFMIg2
+https://open.spotify.com/album/3T60aLlp62MrFlRrIY0Btc
+https://open.spotify.com/album/0iSnEvE0mgO6c2FOpm3pcq
+https://open.spotify.com/album/4jMtRqpTc30H2oEPDbnKC4
+https://open.spotify.com/album/2vtOWcCtEYO6g99F4McXZ0
+https://open.spotify.com/album/7KUmdgjZxB8wvZKwAgKePs
+https://open.spotify.com/album/5kEI2Jxi14qfWi3xDXlwP7
+https://open.spotify.com/album/7eMsxECPokh5cj156zMKmW
+https://open.spotify.com/album/36xprtBYNUsWCkSVLfhHIh
+https://open.spotify.com/album/5vA6P92DA6MdMEyCHfNl39
+https://open.spotify.com/album/7gDLJOUHJSsJ3RsvvJ7vAM
+https://open.spotify.com/album/68SdgkSUMj03vvOzUnqs9d
+https://open.spotify.com/album/7stth43lhb8v64rJRptmKV
+https://open.spotify.com/album/0h9pMIV1Dns5bKicfHuBaZ
+https://open.spotify.com/album/2XYdQNRzJJOsTVPNmN8zVp
+https://open.spotify.com/album/0XozbOjHWmFYXCAgwlH1Rw
+https://open.spotify.com/album/4bjlq513kfK98YdRDyQ3Wu
+https://open.spotify.com/album/2AwSkseBzeDsKICTIQbem0
+https://open.spotify.com/album/1yEGThzMJQwwQtgrZu4k2e
+https://open.spotify.com/album/0P4k9CgrETE0HUHjJIdqDU
+https://open.spotify.com/album/7B3G2fYACb6qtLklB1NFIL
+https://open.spotify.com/album/2DTQSSgopqn8lRto5nrEs1
+https://open.spotify.com/album/7CmKlPQINCMTdeJtQfxEgB
+https://open.spotify.com/album/0T0vqZl62nmwCzvUllF2C8
+https://open.spotify.com/album/69RgIHQh0Z2bowF0EBo69Q
+https://open.spotify.com/album/0iBE1rDjfdRUDnVk0h7v1I
+https://open.spotify.com/album/0fDMUVMlesqsGZzDKBS23b
+https://open.spotify.com/album/7EKHXknpSmESZiZ18z4N6A
+https://open.spotify.com/album/7cP89RhYkt3bGxtlH6pH3p
+https://open.spotify.com/album/4EvyMLn8MO8ozREZajn6df
+https://open.spotify.com/album/0kgD4sTUloCGUbDGyTxqV7
+https://open.spotify.com/album/2ayrWnruBeS1vI4fPawoNk
+https://open.spotify.com/album/6el9i3xYmiw1OjTMS3Fynx
+https://open.spotify.com/album/1HWQoXxBmTV67l8UoPJJTL
+https://open.spotify.com/album/7Dy3CVigHGifPEHkAbMbaD
+https://open.spotify.com/album/7nb9neQvBSFJYWotRExpna
+https://open.spotify.com/album/7aP7SExzj0BX9gf5HtJtjd
+https://open.spotify.com/album/1RI3MI7tNy6aPWQa4rhSCO
+https://open.spotify.com/album/0eZ8sJBIMe6PFwclD589bn
+https://open.spotify.com/album/28Ha2rs9vBwOqfNLGBWkAo
+https://open.spotify.com/album/6y5cvZO6OK8UCRXPU5Cmmj
+https://open.spotify.com/album/6shH7NYCoBoWks3ddtW848
+https://open.spotify.com/album/5xnzwHfhoRcXFioW6PFkcT
+https://open.spotify.com/album/7FeMc9J7k4dRqfwhKbDpV0
+https://open.spotify.com/album/7p4vzEd5qN80h1ARNVpq0D
+https://open.spotify.com/album/0ZC9MsQcQtG9FCiEKaWiHY
+https://open.spotify.com/album/43gDrPnCoCL2W0F8Sonrng
+https://open.spotify.com/album/2dPrEbOJbQy3mTohYdm4kI
+https://open.spotify.com/album/1izcM9GwEE8QNsbfPeKDuo
+https://open.spotify.com/album/2WtnRAnQww36eF2OjH7WSn
+https://open.spotify.com/album/2A735lIrw354QZV52tZvdL
+https://open.spotify.com/album/08cOb38i74Oq44wyqqlHm9
+https://open.spotify.com/album/6PJwGXAN0U3whIgqIDZ8OU
+https://open.spotify.com/album/6IPbhIHFZIEYhQlZI000DB
+https://open.spotify.com/album/08Y3QjcmVihRgFFtppaQNO
+https://open.spotify.com/album/5DVNCzpvDrSEIFiU7hm8ey
+https://open.spotify.com/album/2LFnGB2P77Ed5cjYBiZMVx
+https://open.spotify.com/album/3g9nxqGQdWNc5DBELScTWo
+https://open.spotify.com/album/2LBJMI6gPIUNkssdfDLMdz
+https://open.spotify.com/album/0JuE6sVbTNJT6UQWBUVKo3
+https://open.spotify.com/album/6KdfcH2LoMk2iNmMGeHX5Z
+https://open.spotify.com/album/42mWT8LTLMr11c1EsUnCeq
+https://open.spotify.com/album/0cbBAlVJ0CQK96s71HWU4R
+https://open.spotify.com/album/094LVoZpuHpU0QwZQNmqAc
+https://open.spotify.com/album/1noWyz98Yqv1lRVks3VAFw
+https://open.spotify.com/album/2QxBsla0QZcnh4jmEtIlM6
+https://open.spotify.com/album/0N9XSZBQKCmSkIJVuD9Lsu
+https://open.spotify.com/album/0K3tz2otxvU2A5BFDsEvMp
+https://open.spotify.com/album/4SokWQUhnisvlWmxZ968RJ
+https://open.spotify.com/album/02mx1csQaxLkA8VlmdSkb2
+https://open.spotify.com/album/5G435lOD95D95YTKAuMn84
+https://open.spotify.com/album/6glgu7cwgVkrIpdcYUT0xF
+https://open.spotify.com/album/2N6hNjqtXf9PimVTiKhMY8
+https://open.spotify.com/album/5KJ6knuB1IVgxIsYTNX6dd
+https://open.spotify.com/album/3Echn3ABHpOQesfStveFnJ
+https://open.spotify.com/album/6xMuaOboivwaqgRZnJ6DYg
+https://open.spotify.com/album/1b0ZUmsLKfYcgEyNOVbxof
+https://open.spotify.com/album/5yVFeqIHqXjgETEl6n9mJd
+https://open.spotify.com/album/4uWHd88oEpD9Zis2xD5nc6
+https://open.spotify.com/album/4xgwHCjmp5z754mjUc7gyo
 ];
 
 
